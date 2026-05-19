@@ -2101,10 +2101,11 @@ if option == 'Data Retrive from YouTube API':
             st.success('Retrived data from YouTube successfully')
             st.balloons()
 
-    except:
+    except Exception as e:
         col1,col2 = st.columns([0.45,0.55])
         with col1:
             st.warning("Please enter the valid Channel ID and API key")
+            st.exception(e)
 
 
 elif option == 'Store data to MongoDB':
